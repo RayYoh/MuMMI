@@ -1,0 +1,260 @@
+<mujoco>
+    <!-- <body name="wall" pos="2 0 0.1"> -->
+        <!-- <geom name="wall_1" type="box" conaffinity="1" pos="0 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/> -->
+        <!-- <geom name="wall_2" type="box" conaffinity="1" pos="2 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/> -->
+        <geom name="wall_3" type="box" conaffinity="1" pos="4 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/>
+        <!-- <geom name="wall_4" type="box" conaffinity="1" pos="6 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/> -->
+        <geom name="wall_5" type="box" conaffinity="1" pos="8 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/>
+        <!-- <geom name="wall_6" type="box" conaffinity="1" pos="10 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/> -->
+        <geom name="wall_7" type="box" conaffinity="1" pos="12 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/>
+        <!-- <geom name="wall_8" type="box" conaffinity="1" pos="14 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/> -->
+        <geom name="wall_9" type="box" conaffinity="1" pos="16 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/>
+        <!-- <geom name="wall_10" type="box" conaffinity="1" pos="18 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/> -->
+        <geom name="wall_11" type="box" conaffinity="1" pos="20 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/>
+        <!-- <geom name="wall_12" type="box" conaffinity="1" pos="22 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/> -->
+        <geom name="wall_13" type="box" conaffinity="1" pos="24 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/>
+        <!-- <geom name="wall_14" type="box" conaffinity="1" pos="26 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/> -->
+        <geom name="wall_15" type="box" conaffinity="1" pos="28 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/>
+        <!-- <geom name="wall_16" type="box" conaffinity="1" pos="30 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/> -->
+        <geom name="wall_17" type="box" conaffinity="1" pos="32 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/>
+        <!-- <geom name="wall_18" type="box" conaffinity="1" pos="34 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/> -->
+        <geom name="wall_19" type="box" conaffinity="1" pos="36 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/>
+        <!-- <geom name="wall_20" type="box" conaffinity="1" pos="38 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/> -->
+        <geom name="wall_21" type="box" conaffinity="1" pos="40 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/>
+        <!-- <geom name="wall_22" type="box" conaffinity="1" pos="42 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/> -->
+        <geom name="wall_23" type="box" conaffinity="1" pos="44 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/>
+        <!-- <geom name="wall_24" type="box" conaffinity="1" pos="46 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/> -->
+        <geom name="wall_25" type="box" conaffinity="1" pos="48 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/>
+        <!-- <geom name="wall_26" type="box" conaffinity="1" pos="50 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/> -->
+        <geom name="wall_27" type="box" conaffinity="1" pos="52 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/>
+        <!-- <geom name="wall_28" type="box" conaffinity="1" pos="54 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/> -->
+        <geom name="wall_29" type="box" conaffinity="1" pos="56 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/>
+        <!-- <geom name="wall_30" type="box" conaffinity="1" pos="58 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/> -->
+        <geom name="wall_31" type="box" conaffinity="1" pos="60 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/>
+        <!-- <geom name="wall_32" type="box" conaffinity="1" pos="62 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/> -->
+        
+        <geom name="wall_33" type="box" conaffinity="1" pos="64 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/>
+        <!-- <geom name="wall_34" type="box" conaffinity="1" pos="66 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/> -->
+        <geom name="wall_35" type="box" conaffinity="1" pos="68 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/>
+        <!-- <geom name="wall_36" type="box" conaffinity="1" pos="70 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/> -->
+        <geom name="wall_37" type="box" conaffinity="1" pos="72 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/>
+        <!-- <geom name="wall_38" type="box" conaffinity="1" pos="74 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/> -->
+        <geom name="wall_39" type="box" conaffinity="1" pos="76 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/>
+        <!-- <geom name="wall_40" type="box" conaffinity="1" pos="78 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/> -->
+        <geom name="wall_41" type="box" conaffinity="1" pos="80 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/>
+        <!-- <geom name="wall_42" type="box" conaffinity="1" pos="82 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/> -->
+        <geom name="wall_43" type="box" conaffinity="1" pos="84 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/>
+        <!-- <geom name="wall_44" type="box" conaffinity="1" pos="86 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/> -->
+        <geom name="wall_45" type="box" conaffinity="1" pos="88 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/>
+        <!-- <geom name="wall_46" type="box" conaffinity="1" pos="90 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/> -->
+        <geom name="wall_47" type="box" conaffinity="1" pos="92 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/>
+        <!-- <geom name="wall_48" type="box" conaffinity="1" pos="94 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/> -->
+        <geom name="wall_49" type="box" conaffinity="1" pos="96 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/>
+        <!-- <geom name="wall_50" type="box" conaffinity="1" pos="98 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/> -->
+        <geom name="wall_51" type="box" conaffinity="1" pos="100 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/>
+        <!-- <geom name="wall_52" type="box" conaffinity="1" pos="102 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/> -->
+        <geom name="wall_53" type="box" conaffinity="1" pos="104 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/>
+        <!-- <geom name="wall_54" type="box" conaffinity="1" pos="106 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/> -->
+        <geom name="wall_55" type="box" conaffinity="1" pos="108 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/>
+        <!-- <geom name="wall_56" type="box" conaffinity="1" pos="110 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/> -->
+        <geom name="wall_57" type="box" conaffinity="1" pos="112 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/>
+        <!-- <geom name="wall_58" type="box" conaffinity="1" pos="114 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/> -->
+        <geom name="wall_59" type="box" conaffinity="1" pos="116 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/>
+        <!-- <geom name="wall_60" type="box" conaffinity="1" pos="118 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/> -->
+        <geom name="wall_61" type="box" conaffinity="1" pos="120 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/>
+        <!-- <geom name="wall_62" type="box" conaffinity="1" pos="122 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/> -->
+        <geom name="wall_63" type="box" conaffinity="1" pos="124 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/>
+        <!-- <geom name="wall_64" type="box" conaffinity="1" pos="126 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/> -->
+        
+        <geom name="wall_65" type="box" conaffinity="1" pos="128 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/>
+        <!-- <geom name="wall_66" type="box" conaffinity="1" pos="130 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/> -->
+        <geom name="wall_67" type="box" conaffinity="1" pos="132 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/>
+        <!-- <geom name="wall_68" type="box" conaffinity="1" pos="134 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/> -->
+        <geom name="wall_69" type="box" conaffinity="1" pos="136 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/>
+        <!-- <geom name="wall_70" type="box" conaffinity="1" pos="138 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/> -->
+        <geom name="wall_71" type="box" conaffinity="1" pos="140 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/>
+        <!-- <geom name="wall_72" type="box" conaffinity="1" pos="142 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/> -->
+        <geom name="wall_73" type="box" conaffinity="1" pos="144 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/>
+        <!-- <geom name="wall_74" type="box" conaffinity="1" pos="146 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/> -->
+        <geom name="wall_75" type="box" conaffinity="1" pos="148 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/>
+        <!-- <geom name="wall_76" type="box" conaffinity="1" pos="150 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/> -->
+        <geom name="wall_77" type="box" conaffinity="1" pos="152 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/>
+        <!-- <geom name="wall_78" type="box" conaffinity="1" pos="154 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/> -->
+        <geom name="wall_79" type="box" conaffinity="1" pos="156 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/>
+        <!-- <geom name="wall_80" type="box" conaffinity="1" pos="158 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/> -->
+        <geom name="wall_81" type="box" conaffinity="1" pos="160 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/>
+        <!-- <geom name="wall_82" type="box" conaffinity="1" pos="162 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/> -->
+        <geom name="wall_83" type="box" conaffinity="1" pos="164 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/>
+        <!-- <geom name="wall_84" type="box" conaffinity="1" pos="166 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/> -->
+        <geom name="wall_85" type="box" conaffinity="1" pos="168 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/>
+        <!-- <geom name="wall_86" type="box" conaffinity="1" pos="170 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/> -->
+        <geom name="wall_87" type="box" conaffinity="1" pos="172 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/>
+        <!-- <geom name="wall_88" type="box" conaffinity="1" pos="174 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/> -->
+        <geom name="wall_89" type="box" conaffinity="1" pos="176 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/>
+        <!-- <geom name="wall_90" type="box" conaffinity="1" pos="178 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/> -->
+        <geom name="wall_91" type="box" conaffinity="1" pos="180 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/>
+        <!-- <geom name="wall_92" type="box" conaffinity="1" pos="182 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/> -->
+        <geom name="wall_93" type="box" conaffinity="1" pos="184 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/>
+        <!-- <geom name="wall_94" type="box" conaffinity="1" pos="186 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/> -->
+        <geom name="wall_95" type="box" conaffinity="1" pos="188 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/>
+        <!-- <geom name="wall_96" type="box" conaffinity="1" pos="190 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/> -->
+        
+        <geom name="wall_97" type="box" conaffinity="1" pos="192 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/>
+        <!-- <geom name="wall_98" type="box" conaffinity="1" pos="194 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/> -->
+        <geom name="wall_99" type="box" conaffinity="1" pos="196 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/>
+        <!-- <geom name="wall_100" type="box" conaffinity="1" pos="198 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/> -->
+        <geom name="wall_101" type="box" conaffinity="1" pos="200 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/>
+        <!-- <geom name="wall_102" type="box" conaffinity="1" pos="202 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/> -->
+        <geom name="wall_103" type="box" conaffinity="1" pos="204 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/>
+        <!-- <geom name="wall_104" type="box" conaffinity="1" pos="206 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/> -->
+        <geom name="wall_105" type="box" conaffinity="1" pos="208 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/>
+        <!-- <geom name="wall_106" type="box" conaffinity="1" pos="210 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/> -->
+        <geom name="wall_107" type="box" conaffinity="1" pos="212 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/>
+        <!-- <geom name="wall_108" type="box" conaffinity="1" pos="214 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/> -->
+        <geom name="wall_109" type="box" conaffinity="1" pos="216 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/>
+        <!-- <geom name="wall_110" type="box" conaffinity="1" pos="218 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/> -->
+        <geom name="wall_111" type="box" conaffinity="1" pos="220 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/>
+        <!-- <geom name="wall_112" type="box" conaffinity="1" pos="222 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/> -->
+        <geom name="wall_113" type="box" conaffinity="1" pos="224 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/>
+        <!-- <geom name="wall_114" type="box" conaffinity="1" pos="226 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/> -->
+        <geom name="wall_115" type="box" conaffinity="1" pos="228 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/>
+        <!-- <geom name="wall_116" type="box" conaffinity="1" pos="230 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/> -->
+        <geom name="wall_117" type="box" conaffinity="1" pos="232 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/>
+        <!-- <geom name="wall_118" type="box" conaffinity="1" pos="234 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/> -->
+        <geom name="wall_119" type="box" conaffinity="1" pos="236 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/>
+        <!-- <geom name="wall_120" type="box" conaffinity="1" pos="238 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/> -->
+        <geom name="wall_121" type="box" conaffinity="1" pos="240 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/>
+        <!-- <geom name="wall_122" type="box" conaffinity="1" pos="242 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/> -->
+        <geom name="wall_123" type="box" conaffinity="1" pos="244 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/>
+        <!-- <geom name="wall_124" type="box" conaffinity="1" pos="246 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/> -->
+        <geom name="wall_125" type="box" conaffinity="1" pos="248 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/>
+        <!-- <geom name="wall_126" type="box" conaffinity="1" pos="250 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/> -->
+        <geom name="wall_127" type="box" conaffinity="1" pos="252 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/>
+        <!-- <geom name="wall_128" type="box" conaffinity="1" pos="254 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/> -->
+        
+        <geom name="wall_129" type="box" conaffinity="1" pos="256 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/>
+        <!-- <geom name="wall_130" type="box" conaffinity="1" pos="258 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/> -->
+        <geom name="wall_131" type="box" conaffinity="1" pos="260 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/>
+        <!-- <geom name="wall_132" type="box" conaffinity="1" pos="262 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/> -->
+        <geom name="wall_133" type="box" conaffinity="1" pos="264 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/>
+        <!-- <geom name="wall_134" type="box" conaffinity="1" pos="266 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/> -->
+        <geom name="wall_135" type="box" conaffinity="1" pos="268 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/>
+        <!-- <geom name="wall_136" type="box" conaffinity="1" pos="270 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/> -->
+        <geom name="wall_137" type="box" conaffinity="1" pos="272 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/>
+        <!-- <geom name="wall_138" type="box" conaffinity="1" pos="274 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/> -->
+        <geom name="wall_139" type="box" conaffinity="1" pos="276 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/>
+        <!-- <geom name="wall_140" type="box" conaffinity="1" pos="278 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/> -->
+        <geom name="wall_141" type="box" conaffinity="1" pos="280 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/>
+        <!-- <geom name="wall_142" type="box" conaffinity="1" pos="282 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/> -->
+        <geom name="wall_143" type="box" conaffinity="1" pos="284 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/>
+        <!-- <geom name="wall_144" type="box" conaffinity="1" pos="286 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/> -->
+        <geom name="wall_145" type="box" conaffinity="1" pos="288 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/>
+        <!-- <geom name="wall_146" type="box" conaffinity="1" pos="290 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/> -->
+        <geom name="wall_147" type="box" conaffinity="1" pos="292 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/>
+        <!-- <geom name="wall_148" type="box" conaffinity="1" pos="294 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/> -->
+        <geom name="wall_149" type="box" conaffinity="1" pos="296 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/>
+        <!-- <geom name="wall_150" type="box" conaffinity="1" pos="298 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/> -->
+        <geom name="wall_151" type="box" conaffinity="1" pos="300 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/>
+        <!-- <geom name="wall_152" type="box" conaffinity="1" pos="302 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/> -->
+        <geom name="wall_153" type="box" conaffinity="1" pos="304 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/>
+        <!-- <geom name="wall_154" type="box" conaffinity="1" pos="306 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/> -->
+        <geom name="wall_155" type="box" conaffinity="1" pos="308 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/>
+        <!-- <geom name="wall_156" type="box" conaffinity="1" pos="310 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/> -->
+        <geom name="wall_157" type="box" conaffinity="1" pos="312 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/>
+        <!-- <geom name="wall_158" type="box" conaffinity="1" pos="314 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/> -->
+        <geom name="wall_159" type="box" conaffinity="1" pos="316 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/>
+        <!-- <geom name="wall_160" type="box" conaffinity="1" pos="318 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/> -->
+        
+        <geom name="wall_161" type="box" conaffinity="1" pos="320 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/>
+        <!-- <geom name="wall_162" type="box" conaffinity="1" pos="322 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/> -->
+        <geom name="wall_163" type="box" conaffinity="1" pos="324 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/>
+        <!-- <geom name="wall_164" type="box" conaffinity="1" pos="326 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/> -->
+        <geom name="wall_165" type="box" conaffinity="1" pos="328 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/>
+        <!-- <geom name="wall_166" type="box" conaffinity="1" pos="330 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/> -->
+        <geom name="wall_167" type="box" conaffinity="1" pos="332 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/>
+        <!-- <geom name="wall_168" type="box" conaffinity="1" pos="334 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/> -->
+        <geom name="wall_169" type="box" conaffinity="1" pos="336 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/>
+        <!-- <geom name="wall_170" type="box" conaffinity="1" pos="338 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/> -->
+        <geom name="wall_171" type="box" conaffinity="1" pos="340 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/>
+        <!-- <geom name="wall_172" type="box" conaffinity="1" pos="342 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/> -->
+        <geom name="wall_173" type="box" conaffinity="1" pos="344 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/>
+        <!-- <geom name="wall_174" type="box" conaffinity="1" pos="346 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/> -->
+        <geom name="wall_175" type="box" conaffinity="1" pos="348 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/>
+        <!-- <geom name="wall_176" type="box" conaffinity="1" pos="350 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/> -->
+        <geom name="wall_177" type="box" conaffinity="1" pos="352 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/>
+        <!-- <geom name="wall_178" type="box" conaffinity="1" pos="354 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/> -->
+        <geom name="wall_179" type="box" conaffinity="1" pos="356 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/>
+        <!-- <geom name="wall_180" type="box" conaffinity="1" pos="358 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/> -->
+        <geom name="wall_181" type="box" conaffinity="1" pos="360 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/>
+        <!-- <geom name="wall_182" type="box" conaffinity="1" pos="362 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/> -->
+        <geom name="wall_183" type="box" conaffinity="1" pos="364 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/>
+        <!-- <geom name="wall_184" type="box" conaffinity="1" pos="366 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/> -->
+        <geom name="wall_185" type="box" conaffinity="1" pos="368 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/>
+        <!-- <geom name="wall_186" type="box" conaffinity="1" pos="370 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/> -->
+        <geom name="wall_187" type="box" conaffinity="1" pos="372 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/>
+        <!-- <geom name="wall_188" type="box" conaffinity="1" pos="374 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/> -->
+        <geom name="wall_189" type="box" conaffinity="1" pos="376 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/>
+        <!-- <geom name="wall_190" type="box" conaffinity="1" pos="378 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/> -->
+        <geom name="wall_191" type="box" conaffinity="1" pos="380 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/>
+        <!-- <geom name="wall_192" type="box" conaffinity="1" pos="382 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/> -->
+        
+        <geom name="wall_193" type="box" conaffinity="1" pos="384 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/>
+        <!-- <geom name="wall_194" type="box" conaffinity="1" pos="386 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/> -->
+        <geom name="wall_195" type="box" conaffinity="1" pos="388 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/>
+        <!-- <geom name="wall_196" type="box" conaffinity="1" pos="390 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/> -->
+        <geom name="wall_197" type="box" conaffinity="1" pos="392 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/>
+        <!-- <geom name="wall_198" type="box" conaffinity="1" pos="394 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/> -->
+        <geom name="wall_199" type="box" conaffinity="1" pos="396 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/>
+        <!-- <geom name="wall_200" type="box" conaffinity="1" pos="398 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/> -->
+        <geom name="wall_201" type="box" conaffinity="1" pos="400 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/>
+        <!-- <geom name="wall_202" type="box" conaffinity="1" pos="402 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/> -->
+        <geom name="wall_203" type="box" conaffinity="1" pos="404 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/>
+        <!-- <geom name="wall_204" type="box" conaffinity="1" pos="406 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/> -->
+        <geom name="wall_205" type="box" conaffinity="1" pos="408 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/>
+        <!-- <geom name="wall_206" type="box" conaffinity="1" pos="410 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/> -->
+        <geom name="wall_207" type="box" conaffinity="1" pos="412 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/>
+        <!-- <geom name="wall_208" type="box" conaffinity="1" pos="414 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/> -->
+        <geom name="wall_209" type="box" conaffinity="1" pos="416 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/>
+        <!-- <geom name="wall_210" type="box" conaffinity="1" pos="418 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/> -->
+        <geom name="wall_211" type="box" conaffinity="1" pos="420 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/>
+        <!-- <geom name="wall_212" type="box" conaffinity="1" pos="422 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/> -->
+        <geom name="wall_213" type="box" conaffinity="1" pos="424 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/>
+        <!-- <geom name="wall_214" type="box" conaffinity="1" pos="426 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/> -->
+        <geom name="wall_215" type="box" conaffinity="1" pos="428 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/>
+        <!-- <geom name="wall_216" type="box" conaffinity="1" pos="430 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/> -->
+        <geom name="wall_217" type="box" conaffinity="1" pos="432 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/>
+        <!-- <geom name="wall_218" type="box" conaffinity="1" pos="434 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/> -->
+        <geom name="wall_219" type="box" conaffinity="1" pos="436 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/>
+        <!-- <geom name="wall_220" type="box" conaffinity="1" pos="438 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/> -->
+        <geom name="wall_221" type="box" conaffinity="1" pos="440 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/>
+        <!-- <geom name="wall_222" type="box" conaffinity="1" pos="442 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/> -->
+        <geom name="wall_223" type="box" conaffinity="1" pos="444 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/>
+        <!-- <geom name="wall_224" type="box" conaffinity="1" pos="446 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/> -->
+        
+        <geom name="wall_225" type="box" conaffinity="1" pos="448 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/>
+        <!-- <geom name="wall_226" type="box" conaffinity="1" pos="450 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/> -->
+        <geom name="wall_227" type="box" conaffinity="1" pos="452 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/>
+        <!-- <geom name="wall_228" type="box" conaffinity="1" pos="454 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/> -->
+        <geom name="wall_229" type="box" conaffinity="1" pos="456 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/>
+        <!-- <geom name="wall_230" type="box" conaffinity="1" pos="458 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/> -->
+        <geom name="wall_231" type="box" conaffinity="1" pos="460 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/>
+        <!-- <geom name="wall_232" type="box" conaffinity="1" pos="462 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/> -->
+        <geom name="wall_233" type="box" conaffinity="1" pos="464 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/>
+        <!-- <geom name="wall_234" type="box" conaffinity="1" pos="466 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/> -->
+        <geom name="wall_235" type="box" conaffinity="1" pos="468 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/>
+        <!-- <geom name="wall_236" type="box" conaffinity="1" pos="470 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/> -->
+        <geom name="wall_237" type="box" conaffinity="1" pos="472 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/>
+        <!-- <geom name="wall_238" type="box" conaffinity="1" pos="474 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/> -->
+        <geom name="wall_239" type="box" conaffinity="1" pos="476 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/>
+        <!-- <geom name="wall_240" type="box" conaffinity="1" pos="478 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/> -->
+        <geom name="wall_241" type="box" conaffinity="1" pos="480 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/>
+        <!-- <geom name="wall_242" type="box" conaffinity="1" pos="482 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/> -->
+        <geom name="wall_243" type="box" conaffinity="1" pos="484 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/>
+        <!-- <geom name="wall_244" type="box" conaffinity="1" pos="486 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/> -->
+        <geom name="wall_245" type="box" conaffinity="1" pos="488 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/>
+        <!-- <geom name="wall_246" type="box" conaffinity="1" pos="490 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/> -->
+        <geom name="wall_247" type="box" conaffinity="1" pos="492 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/>
+        <!-- <geom name="wall_248" type="box" conaffinity="1" pos="494 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/> -->
+        <geom name="wall_249" type="box" conaffinity="1" pos="496 0 .1" size="0.04 0.8 0.4" rgba="1 1 1 1"/>
+    <!-- </body> -->
+</mujoco>
