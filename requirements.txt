@@ -4,5 +4,6 @@ gym==0.22.0
 ipdb==0.13.13
 numpy==1.19.5
 Pillow==9.5.0
-tensorflow==2.2.0
+tensorflow==2.12.0
+tensorflow_gpu==2.1.0
 tensorflow_probability==0.9.0
