@@ -56,7 +56,7 @@ class Dreamer(tools.Module):
         if state is not None and reset.any():
             mask = tf.cast(1 - reset, self._float)[:, None]
             state = tf.nest.map_structure(lambda x: x * mask, state)
-        if self._should_train(step) and not self._c.test:
+        if self._should_train(step) and not self._c.test: # diff
             log = self._should_log(step)
             n = self._c.pretrain if self._should_pretrain() else self._c.train_steps
             print(f'Training for {n} steps.')
@@ -126,7 +126,7 @@ class Dreamer(tools.Module):
                 audio_pred = self._decode_audio(feat)
 
             likes = tools.AttrDict()
-            recon_img = image_pred.log_prob(data['image']) * tf.squeeze(data["image_flag"])
+            recon_img = image_pred.log_prob(data['image']) * tf.squeeze(data["image_flag"]) # diff
             likes.image = tf.reduce_mean(recon_img)
             if self._c.multi_modal:
                 recon_dep = depth_pred.log_prob(data['depth']) * tf.squeeze(data["dep_flag"])
@@ -347,6 +347,7 @@ def summarize_episode(episode, config, datadir, writer, prefix):
         (f'{prefix}/length', len(episode['reward']) - 1),
         (f'episodes', episodes)]
     step = count_steps(datadir, config)
+    # diff
     if config.test:
         with (config.logdir / 'results.jsonl').open('a') as f:
             f.write(json.dumps(dict([('step', step)] + metrics)) + '\n')
@@ -366,6 +367,7 @@ def make_env(config, writer, prefix, datadir, store):
         env = wrappers.DeepMindControl(task)
         env = wrappers.ActionRepeat(env, config.action_repeat)
         env = wrappers.NormalizeActions(env)
+        # diff
         if config.natural:
             data = tools.load_imgnet(store)
             env = wrappers.NaturalMujoco(env, data)
