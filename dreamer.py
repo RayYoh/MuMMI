@@ -82,10 +82,8 @@ class Dreamer(tools.Module):
         obs = preprocess(obs, self._c)
         embed = self._encode_img(obs)
         if self._c.multi_modal:
-            embed_depth = self._encode_dep(obs)  
-            embed_touch = self._encode_touch(obs["touch"])
-            embed_audio = self._encode_audio(obs["audio"])
-            embed = tf.concat([embed, embed_depth, embed_touch, embed_audio], -1)
+            embed_touch = self._encode_touch(obs["state"])
+            embed = tf.concat([embed, embed_touch], -1)
 
         latent, _ = self._dynamics.obs_step(latent, action, embed)
         feat = self._dynamics.get_feat(latent)
@@ -111,30 +109,22 @@ class Dreamer(tools.Module):
         with tf.GradientTape() as model_tape:
             embed = self._encode_img(data)  # * data["img_flag"]
             if self._c.multi_modal:
-                embed_depth = self._encode_dep(data)
-                embed_touch = self._encode_touch(data["touch"])
-                embed_audio = self._encode_audio(data["audio"])
-                embed = tf.concat([embed, embed_depth, embed_touch, embed_audio], -1)
+                embed_touch = self._encode_touch(data["state"])
+                embed = tf.concat([embed, embed_touch], -1)
 
             post, prior = self._dynamics.observe(embed, data['action'])
             feat = self._dynamics.get_feat(post)
             image_pred = self._decode_img(feat)
             reward_pred = self._reward(feat)
             if self._c.multi_modal:
-                depth_pred = self._decode_dep(feat)
                 touch_pred = self._decode_touch(feat)
-                audio_pred = self._decode_audio(feat)
 
             likes = tools.AttrDict()
-            recon_img = image_pred.log_prob(data['image']) * tf.squeeze(data["image_flag"]) # diff
+            recon_img = image_pred.log_prob(data['image']) # diff
             likes.image = tf.reduce_mean(recon_img)
             if self._c.multi_modal:
-                recon_dep = depth_pred.log_prob(data['depth']) * tf.squeeze(data["dep_flag"])
-                recon_touch = touch_pred.log_prob(data['touch']) * tf.squeeze(data["touch_flag"])
-                recon_audio = audio_pred.log_prob(data['audio']) * tf.squeeze(data["audio_flag"])
-                likes.depth = tf.reduce_mean(recon_dep)
+                recon_touch = touch_pred.log_prob(data['state'])
                 likes.touch = tf.reduce_mean(recon_touch)
-                likes.audio = tf.reduce_mean(recon_audio)
 
             likes.reward = tf.reduce_mean(reward_pred.log_prob(data['reward']))
             if self._c.pcont:
@@ -189,29 +179,22 @@ class Dreamer(tools.Module):
             elu=tf.nn.elu, relu=tf.nn.relu, swish=tf.nn.swish,
             leaky_relu=tf.nn.leaky_relu)
         cnn_act = acts[self._c.cnn_act]
-        touch_shape = {"dmc_walker_walk": (2,), "dmc_quadruped_walk": (4,), "dmc_finger_spin": (2,),
-                       "dmc_cheetah_run": (2,)}
-        audio_shape = {"dmc_walker_walk": (8820,), "dmc_quadruped_walk": (8820,), "dmc_finger_spin": (8820,),
-                       "dmc_cheetah_run": (8820,)}
+        touch_shape = {"dmc_walker_walk": (24,), "dmc_cup_catch": (4,), "dmc_cheetah_run": (2,)}
         act = acts[self._c.dense_act]
         # self._encode = models.ConvEncoder(self._c.cnn_depth, cnn_act) # Yong Lee, modified
         self._encode_img = models.ConvEncoder(self._c.cnn_depth, cnn_act, modality="image")
-        self._encode_dep = models.ConvEncoder(self._c.cnn_depth, cnn_act, modality="depth")
-        self._encode_touch = models.Dense(n=4, d_hidden=128, d_out=1024, name="touch")
-        self._encode_audio = models.Dense(n=4, d_hidden=128, d_out=1024, name="audio")
+        self._encode_touch = models.Dense(n=2, d_hidden=512, d_out=50, name="state")
         self._dynamics = models.RSSM(self._c.stoch_size, self._c.deter_size, self._c.deter_size)
         self._decode_img = models.ConvDecoder(self._c.cnn_depth, cnn_act, modality="image")
-        self._decode_dep = models.ConvDecoder(self._c.cnn_depth, cnn_act, shape=(64, 64, 1), modality="depth")
-        self._decode_touch = models.DenseDecoder(touch_shape[self._c.task], 3, 96, act=act, name="touch")
-        self._decode_audio = models.DenseDecoder(audio_shape[self._c.task], 3, 96, act=act, name="audio")
+        self._decode_touch = models.DenseDecoder(touch_shape[self._c.task], 3, 96, act=act, name="state")
         self._reward = models.DenseDecoder((), 2, self._c.num_units, act=act, name="reward")
         if self._c.pcont:
             self._pcont = models.DenseDecoder((), 3, self._c.num_units, 'binary', act=act)
         self._value = models.DenseDecoder((), 3, self._c.num_units, act=act)
         self._actor = models.ActionDecoder(self._actdim, 4, self._c.num_units, self._c.action_dist,
                                            init_std=self._c.action_init_std, act=act)
-        model_modules = [self._encode_img, self._encode_dep, self._encode_touch, self._encode_audio,
-                         self._dynamics, self._decode_img, self._decode_dep, self._decode_touch, self._decode_audio,
+        model_modules = [self._encode_img, self._encode_touch,
+                         self._dynamics, self._decode_img, self._decode_touch, 
                          self._reward]
         if self._c.pcont:
             model_modules.append(self._pcont)
@@ -312,8 +295,7 @@ def preprocess(obs, config):
     obs = obs.copy()
     with tf.device('cpu:0'):
         obs['image'] = tf.cast(obs['image'], dtype) / 255.0 - 0.5
-        # obs['depth'] = tf.cast(obs['depth'], dtype) / 200.0 - 0.5
-        # obs['touch'] = tf.cast(obs['touch'], dtype)
+        obs['state'] = tf.cast(obs['state'], dtype)
         clip_rewards = dict(none=lambda x: x, tanh=tf.tanh)[config.clip_rewards]
         obs['reward'] = clip_rewards(obs['reward'])
     return obs
@@ -373,7 +355,7 @@ def make_env(config, writer, prefix, datadir, store):
             env = wrappers.NaturalMujoco(env, data)
             audio_data = tools.load_audio(store)
             env = wrappers.AudioMujoco(env, audio_data)
-        env = wrappers.MissingMultimodal(env, config)
+            env = wrappers.MissingMultimodal(env, config)
     elif suite == 'atari':
         env = wrappers.Atari(
             task, config.action_repeat, (64, 64), grayscale=False,
