@@ -126,7 +126,7 @@ class Dreamer(tools.Module):
                 audio_pred = self._decode_audio(feat)
 
             likes = tools.AttrDict()
-            recon_img = image_pred.log_prob(data['image']) * tf.squeeze(data["img_flag"])
+            recon_img = image_pred.log_prob(data['image']) * tf.squeeze(data["image_flag"])
             likes.image = tf.reduce_mean(recon_img)
             if self._c.multi_modal:
                 recon_dep = depth_pred.log_prob(data['depth']) * tf.squeeze(data["dep_flag"])
@@ -312,8 +312,8 @@ def preprocess(obs, config):
     obs = obs.copy()
     with tf.device('cpu:0'):
         obs['image'] = tf.cast(obs['image'], dtype) / 255.0 - 0.5
-        obs['depth'] = tf.cast(obs['depth'], dtype) / 200.0 - 0.5
-        obs['touch'] = tf.cast(obs['touch'], dtype)
+        # obs['depth'] = tf.cast(obs['depth'], dtype) / 200.0 - 0.5
+        # obs['touch'] = tf.cast(obs['touch'], dtype)
         clip_rewards = dict(none=lambda x: x, tanh=tf.tanh)[config.clip_rewards]
         obs['reward'] = clip_rewards(obs['reward'])
     return obs
@@ -371,7 +371,7 @@ def make_env(config, writer, prefix, datadir, store):
             env = wrappers.NaturalMujoco(env, data)
             audio_data = tools.load_audio(store)
             env = wrappers.AudioMujoco(env, audio_data)
-            env = wrappers.MissingMultimodal(env, config)
+        env = wrappers.MissingMultimodal(env, config)
     elif suite == 'atari':
         env = wrappers.Atari(
             task, config.action_repeat, (64, 64), grayscale=False,
