@@ -26,8 +26,8 @@ class DeepMindControl:
         if domain == 'cup':  # Only domain with multiple words.
             domain = 'ball_in_cup'
         if isinstance(domain, str):
-            # from dm_control_local import suite
-            from dm_control import suite
+            from dm_control_local import suite
+            # from dm_control import suite
             self._env = suite.load(domain, task)
         else:
             assert task is None
@@ -326,13 +326,13 @@ class MissingMultimodal:
             if key in self._c.miss_ratio: 
                 value_f = value
                 flag = np.array([1]).astype(np.float16)
-                if self._t < self._drop_end.get(key, 0):
-                    value_f = 0 * value
-                    flag = 0 * flag
-                elif np.random.rand() <= self._c.miss_ratio.get(key, -1.0): 
-                    value_f = 0 * value
-                    flag = 0 * flag
-                    self._drop_end[key] = self._t + np.random.randint(1, self._c.max_miss_len)
+                # if self._t < self._drop_end.get(key, 0):
+                #     value_f = 0 * value
+                #     flag = 0 * flag
+                # elif np.random.rand() <= self._c.miss_ratio.get(key, -1.0): 
+                #     value_f = 0 * value
+                #     flag = 0 * flag
+                #     self._drop_end[key] = self._t + np.random.randint(1, self._c.max_miss_len)
                 obs_c[key] = value_f
                 obs_c[key + '_flag'] = flag
         return obs_c
