@@ -145,7 +145,7 @@ class CMDreamer(tools.Module):
             likes.reward = tf.reduce_mean(reward_pred.log_prob(data['reward']))
             feat_embed = self._z2embed(feat)
             constrast_img = self._contrastive(feat_embed, prob_img["mean"], data["image_flag"])
-            constrast_touch = 0.001 * self._contrastive(feat_embed, prob_touch["mean"], data["state_flag"])
+            constrast_touch = 1 * self._contrastive(feat_embed, prob_touch["mean"], data["state_flag"])
             
             likes.image = tf.reduce_mean(constrast_img)
             likes.touch = tf.reduce_mean(constrast_touch)
