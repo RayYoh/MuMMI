@@ -179,7 +179,7 @@ class Dreamer(tools.Module):
             elu=tf.nn.elu, relu=tf.nn.relu, swish=tf.nn.swish,
             leaky_relu=tf.nn.leaky_relu)
         cnn_act = acts[self._c.cnn_act]
-        touch_shape = {"dmc_walker_walk": (24,), "dmc_cup_catch": (4,), "dmc_cheetah_run": (2,)}
+        touch_shape = {"dmc_walker_walk": (24,), "dmc_walker_run": (24,), "dmc_cup_catch": (8,), "dmc_cheetah_run": (17,)}
         act = acts[self._c.dense_act]
         # self._encode = models.ConvEncoder(self._c.cnn_depth, cnn_act) # Yong Lee, modified
         self._encode_img = models.ConvEncoder(self._c.cnn_depth, cnn_act, modality="image")
