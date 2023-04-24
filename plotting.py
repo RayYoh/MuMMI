@@ -106,9 +106,9 @@ num_seed = 5
 
 plot_type = ['ablation', 'efficiency', 'gener']
 # read logs
-domain_name = ['walker']
+domain_name = ['cheetah']
 task_name = ['run']
-algs = ['Dreamer']
+algs = ['dreamer', 'mummi']
 init_value = [[] for i in range(len(domain_name))]
 
 cm = 1/2.54
@@ -127,19 +127,26 @@ for index, (domain, task) in enumerate(zip(domain_name, task_name)):
         linestyle = '-'
         predir = './logdir/dmc_{}_{}'.format(domain, task)
     
-        if alg == 'Dreamer':
+        if alg == 'dreamer':
             color = 'r'
             condition = 'Dreamer'
-        if alg == 'img_prop':
+        if alg == 'mummi':
             color = 'g'
-            condition = 'img_prop'
+            condition = 'MuMMI'
 
         config_reward = []
         config_step = []
 
         for seed in range(num_seed):
-            if alg == "Dreamer":
-                file_dir = predir + '/' + 'dreamer-s{}'.format(str(seed)) + '/' + 'metrics.jsonl'
+            if alg == "dreamer":
+                file_dir = predir + '/dreamer/' + 'dreamer-s{}'.format(str(seed)) + '/' + 'metrics.jsonl'
+                steps, reward, reward100, reward500 = read_log('dreamer', file_dir,
+                                                               domain_task=str(domain) + '_' + str(task), mode='eval')
+
+                config_step.append(steps)
+                config_reward.append(reward)
+            elif alg == "mummi":
+                file_dir = predir + '/mummi/' + 'mummi-s{}'.format(str(seed)) + '/' + 'metrics.jsonl'
                 steps, reward, reward100, reward500 = read_log('dreamer', file_dir,
                                                                domain_task=str(domain) + '_' + str(task), mode='eval')
 
@@ -170,9 +177,9 @@ for index, (domain, task) in enumerate(zip(domain_name, task_name)):
             plt.setp(g.lines, zorder=zorder)
 
     if domain == 'cheetah':
-        g.set(xlim=(-60000, 2060000))
+        g.set(xlim=(-60000, 1015000))
 
-        xlabels = ['-0.5', '0.0', '0.5', '1.0', '1.5', '2.0', '2.5']
+        xlabels = ['-0.5', '0.0', '0.2', '0.4', '0.6','0.8','1.0',]
 
     else:
         g.set(xlim=(-15000, 515000))
