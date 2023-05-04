@@ -106,9 +106,9 @@ num_seed = 5
 
 plot_type = ['ablation', 'efficiency', 'gener']
 # read logs
-domain_name = ['cheetah']
-task_name = ['run']
-algs = ['dreamer', 'mummi']
+domain_name = ['walker', 'walker', 'cheetah', 'cup']
+task_name = ['walk', 'run', 'run', 'catch']
+algs = ['dreamer', 'mummi', 'codypro']
 init_value = [[] for i in range(len(domain_name))]
 
 cm = 1/2.54
@@ -119,8 +119,8 @@ mpl.rcParams['font.family'] = 'Arial'
 sns.set_style("whitegrid", {'grid.linestyle': '--'})
 ### Set font size in text, title, labelsize
 sns.set_context("paper", rc={"font.size": font_size, "axes.titlesize": font_size, "axes.labelsize": font_size, "font.name":"Arial"})
-fig, axes = plt.subplots(1, 1)
-fig.set_size_inches(10*cm, 8*cm)
+fig, axes = plt.subplots(2, 2)
+fig.set_size_inches(16*cm, 10*cm)
 for index, (domain, task) in enumerate(zip(domain_name, task_name)):
 
     for alg in algs:
@@ -133,6 +133,9 @@ for index, (domain, task) in enumerate(zip(domain_name, task_name)):
         if alg == 'mummi':
             color = 'g'
             condition = 'MuMMI'
+        if alg == 'codypro':
+            color = 'b'
+            condition = 'CoDypro'
 
         config_reward = []
         config_step = []
@@ -153,7 +156,7 @@ for index, (domain, task) in enumerate(zip(domain_name, task_name)):
                 config_step.append(steps)
                 config_reward.append(reward)
             else:
-                dir = predir + '/' + domain + '-' + task + '-s' + str(seed)
+                dir = predir + '/codypro/' + 'codypro-s{}'.format(str(seed))
                 file_name = 'eval.log'
                 file_dir = dir + '/' + file_name
                 args_file_dir = dir + '/' + 'args.json'
@@ -168,7 +171,7 @@ for index, (domain, task) in enumerate(zip(domain_name, task_name)):
 
         ax_x, ax_y =  index//2, index % 2
 
-        ax = axes
+        ax = axes[ax_x, ax_y]
 
         g = sns.tsplot(ax=ax, time = config_step, data= config_reward, color=color, linestyle=linestyle, condition=condition, ci=95)
 
